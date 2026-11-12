@@ -8,11 +8,27 @@
 winget find multipass
 winget install Canonical.multipass
 ```
+- Multipass Version
+![Screenshot](images/image4.png)
+- Windows Version
+![Screenshot](images/image5.png)
 
 - Multipass local driver auf virtualbox setzen
 - Multipass localdriver kontrollieren
 - Multipass launch demo
-![Screenshot](images/image.png)
+![Screenshot](images/image1.png)
+
+- probieren erste VM zu starten: Fail
+![Screenshot](images/image2.png)
+- Virtualbox fehlt
+```
+winget find virtualbox
+winget install Oracle.VirtualBox
+```
+
+- VM erneut starten mit erfolg
+![Screenshot](images/image3.png)
+
 
 
 - shell in der VM starten
