@@ -1,0 +1,28 @@
+#cloud-config
+
+users:
+  - default
+  - name: csi
+    sudo: ALL=(ALL) NOPASSWD:ALL
+
+package_update: true
+
+hostname: m346-vm
+timezone: Europe/Zurich
+
+packages:
+  - neofetch
+  - tree
+  - cowsay
+  - sl
+
+write_files:
+  - path: /home/ubuntu/begruessung.txt
+    content: |
+      Diese Datei wurde von cloud-init erstellt.
+      Niemand hat sie von Hand angelegt.
+
+runcmd:
+  - echo "Installation abgeschlossen am $(date)" >> /home/ubuntu/begruessung.txt
+  - /usr/games/cowsay "cowsay ist installiert" >> /home/ubuntu/begruessung.txt
+  - dpkg -s sl | grep Status >> /home/ubuntu/begruessung.txt

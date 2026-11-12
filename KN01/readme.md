@@ -1,6 +1,6 @@
 # KN01
 
-## Multipass installieren
+## A&B Multipass installieren 
 
 - Multipass per winget installieren
 
@@ -29,7 +29,19 @@ winget install Oracle.VirtualBox
 - VM erneut starten mit erfolg
 ![Screenshot](images/image3.png)
 
+- run lsb_release -a inside multipass um die linux version anzuzeigen
+![Screenshot](images/image6.png)
 
+- launch mit expliziter cpu/ram/disk angabe
+![Screenshot](images/image7.png)
+
+- CPU Test launch mit 28 cpus
+![Screenshot](images/image8.png)
+
+- CPU Test launch mit 68Gb ram
+![Screenshot](images/image9.png)
+
+- Verwendetes Backend Hyper-V Typ 1, kann nicht Overcommiten
 
 - shell in der VM starten
 ```
@@ -72,4 +84,10 @@ multipass launch --name auto --cloud-init datei.yaml  # mit cloud-init-Konfigura
 | `multipass delete --purge X` | in einem Schritt löschen |
 | `multipass find` | verfügbare Images |
 | `multipass get local.driver` | verwendetes Backend anzeigen |
+
+## C Launch via cloud-init
+
+![Screenshot](images/image10.png)
+
+"\\wsl.localhost\Ubuntu-24.04\home\csi_local\repos\TBZ\Modul346\KN01\cloud-init-basis.yaml"
 
